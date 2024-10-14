@@ -1,7 +1,7 @@
 {
   "package_name": "com.com.example.my_app",
-  "project_description": "A Flutter project using the Stacked architecture, featuring routing, dependency injection, and dialog/bottom sheet management.",
-  "architecture_overview": "The application follows the Stacked architecture with separate folders for app setup, features, UI components, and utilities. It uses Stacked for state management, routing, and dependency injection.",
+  "project_description": "A Flutter project using the Stacked architecture, featuring routing, dependency injection, and dialog/bottom sheet management. The application displays S&P 500 metrics on the homepage using mock data.",
+  "architecture_overview": "The application follows the Stacked architecture with separate folders for app setup, features, UI components, and utilities. It uses Stacked for state management, routing, and dependency injection. The HomeView and HomeViewModel have been updated to display S&P 500 metrics.",
   "folder_structure": {
     "lib": {
       "app": {
@@ -73,7 +73,7 @@
     },
     {
       "name": "lib/features/home/home_view.dart",
-      "description": "The main home view of the application.",
+      "description": "The main home view of the application, displaying S&P 500 metrics using mock data.",
       "class_diagram": "@startuml\nclass HomeView\n@enduml",
       "methods": [],
       "dependencies": [
@@ -83,14 +83,14 @@
     },
     {
       "name": "lib/features/home/home_viewmodel.dart",
-      "description": "ViewModel for the HomeView, manages the state and business logic.",
+      "description": "ViewModel for the HomeView, manages the state and business logic for displaying S&P 500 metrics.",
       "class_diagram": "@startuml\nclass HomeViewModel\n@enduml",
       "methods": [
         {
-          "name": "incrementCounter",
-          "description": "Increments the counter value",
+          "name": "fetchSP500Metrics",
+          "description": "Fetches mock data for S&P 500 metrics",
           "parameters": [],
-          "return_type": "void"
+          "return_type": "Future"
         },
         {
           "name": "showDialog",
